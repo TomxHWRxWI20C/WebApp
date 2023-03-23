@@ -1,15 +1,4 @@
 
-
-function startup() {
-   
-    const el = document.getElementById('container');
-    if (el) {
-        el.addEventListener('touchstart', handleTouch);
-        console.log('Initialized.');
-    }
-}
-  
-
   
 function handleTouch() {
     fetch('https://api.quotable.io/random')
@@ -35,6 +24,8 @@ function handleTouch() {
 }
 
 
-document.addEventListener('DOMContentLoaded', startup);
+document.addEventListener('touchstart', event => {
+  handleTouch();
+})
 
 

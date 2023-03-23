@@ -16,10 +16,10 @@ function handleTouch() {
         const quote = document.getElementById('quote');
         const author = document.getElementById('author');
         if(quote){
-            quote.innerText = json.content;
+            quote.innerText = '"' + json.content + '"';
         }
         if(author){
-          author.innerText = json.author;
+          author.innerText = "- " + json.author;
         }
       })
       .catch((error) => {
